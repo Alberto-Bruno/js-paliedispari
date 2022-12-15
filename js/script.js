@@ -5,17 +5,17 @@ Palidroma
 */
 
 //funzione inserire una parola
-function isPalindroma(word) {
+function isPalindroma(text) {
 
-    let text = [];
+    let pali = [];
     // parola al contrario
-    for (let i = word.length; i >= 0; i--) {
-        text.push(word[i]);
+    for (let i = text.length; i >= 0; i--) {
+        pali.push(text[i]);
     }
 
     // parola al rovesio
-    for (let i = 0; i < parola.length; i++) {      
-        if (parola[i] != text[i + 1]) {
+    for (let i = 0; i < word.length; i++) {      
+        if (word[i] != pali[i + 1]) {
             return false;
         }
     }
@@ -23,9 +23,9 @@ function isPalindroma(word) {
     return true;
 }
 
-const parola = prompt("Inserisci una parola");
+const word = prompt("Inserisci una parola");
 
-let palindroma = isPalindroma(parola);
+let palindroma = isPalindroma(word);
 
 //stampo il risultato
 console.log(palindroma);
