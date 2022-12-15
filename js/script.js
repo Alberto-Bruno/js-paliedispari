@@ -5,33 +5,30 @@ Palidroma
 */
 
 //funzione inserire una parola
-function isPalindroma(text) {
+const wordElement = document.getElementById("word");
+// Chiedo all'utente di inserire una parola 
 
-    let pali = [];
-    // parola al contrario
-    for (let i = text.length; i >= 0; i--) {
-        pali.push(text[i]);
-    }
+let userWord = prompt("Inserisci una parola");
 
-    // parola al rovesio
-    for (let i = 0; i < word.length; i++) {      
-        if (word[i] != pali[i + 1]) {
-            return false;
-        }
-    }
-
-    return true;
+if (functPalindrome(userWord) == true) {
+    console.log('è palindroma');
+    wordElement.innerHTML = `${userWord} è palindroma`;
+} else {
+    console.log('non è palindroma');
+    wordElement.innerHTML = `${userWord} non è palindroma`;
 }
 
-const word = prompt("Inserisci una parola");
 
-let palindroma = isPalindroma(word);
+// funzione 
+function functPalindrome(inputWord) {
 
-//stampo il risultato
-console.log(palindroma);
-
-
-
+    // confronto la parola inserita 
+    if (inputWord) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 /*
 Pari e dispari
